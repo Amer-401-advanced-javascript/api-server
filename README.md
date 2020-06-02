@@ -6,11 +6,11 @@
 ### Author: Amer Majdi
 ### Links and Resources
 
-- [submission PR](http://xyz.com)
-<!-- - [ci/cd](http://xyz.com) (GitHub Actions) -->
+- [submission PR](https://github.com/Amer-401-advanced-javascript/api-server/pull/2)
+- [ci/cd](https://github.com/Amer-401-advanced-javascript/api-server/actions) (GitHub Actions)
+- [Swagger Hub url](https://app.swaggerhub.com/apis/Amer-bit/api-server2/0.1);
 <!-- - [back-end server url](http://xyz.com) (when applicable) -->
 <!-- - [front-end application](http://xyz.com) (when applicable) -->
-- [Swagger Hub url](https://app.swaggerhub.com/apis/Amer-bit/api-server2/0.1);
 
 ### Setup
 
