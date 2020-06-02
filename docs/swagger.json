@@ -1,0 +1,344 @@
+{
+    "openapi" : "3.0.1",
+    "info" : {
+      "title" : "defaultTitle",
+      "description" : "defaultDescription",
+      "version" : "0.1"
+    },
+    "servers" : [ {
+      "url" : "http://localhost:3000"
+    } ],
+    "paths" : {
+      "/categories/1" : {
+        "get" : {
+          "description" : "Auto generated using Swagger Inspector",
+          "responses" : {
+            "200" : {
+              "description" : "Auto generated using Swagger Inspector",
+              "content" : {
+                "application/json; charset=utf-8" : {
+                  "schema" : {
+                    "type" : "string"
+                  },
+                  "examples" : { }
+                }
+              }
+            }
+          },
+          "servers" : [ {
+            "url" : "http://localhost:3000"
+          } ]
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "/categories/2" : {
+        "put" : {
+          "description" : "Auto generated using Swagger Inspector",
+          "requestBody" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/body"
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "{\n    \"id\": 2,\n    \"name\": \"books\",\n    \"display_name\": \"Books\",\n    \"description\": \"Knowledge is Power\"\n}"
+                  }
+                }
+              }
+            }
+          },
+          "responses" : {
+            "200" : {
+              "description" : "Auto generated using Swagger Inspector",
+              "content" : {
+                "application/json; charset=utf-8" : {
+                  "schema" : {
+                    "type" : "string"
+                  },
+                  "examples" : { }
+                }
+              }
+            }
+          },
+          "servers" : [ {
+            "url" : "http://localhost:3000"
+          } ]
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "/categories/3" : {
+        "delete" : {
+          "description" : "Auto generated using Swagger Inspector",
+          "responses" : {
+            "200" : {
+              "description" : "Auto generated using Swagger Inspector",
+              "content" : {
+                "application/json; charset=utf-8" : {
+                  "schema" : {
+                    "type" : "string"
+                  },
+                  "examples" : { }
+                }
+              }
+            }
+          },
+          "servers" : [ {
+            "url" : "http://localhost:3000"
+          } ]
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "/products/1" : {
+        "delete" : {
+          "description" : "Auto generated using Swagger Inspector",
+          "responses" : {
+            "200" : {
+              "description" : "Auto generated using Swagger Inspector",
+              "content" : {
+                "application/json; charset=utf-8" : {
+                  "schema" : {
+                    "type" : "string"
+                  },
+                  "examples" : { }
+                }
+              }
+            }
+          },
+          "servers" : [ {
+            "url" : "http://localhost:3000"
+          } ]
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "/products" : {
+        "get" : {
+          "description" : "Auto generated using Swagger Inspector",
+          "parameters" : [ {
+            "name" : "category",
+            "in" : "query",
+            "required" : false,
+            "style" : "form",
+            "explode" : true,
+            "schema" : {
+              "type" : "string"
+            },
+            "example" : "electronics"
+          } ],
+          "responses" : {
+            "200" : {
+              "description" : "Auto generated using Swagger Inspector",
+              "content" : {
+                "application/json; charset=utf-8" : {
+                  "schema" : {
+                    "type" : "string"
+                  },
+                  "examples" : { }
+                }
+              }
+            }
+          },
+          "servers" : [ {
+            "url" : "http://localhost:3000"
+          } ]
+        },
+        "post" : {
+          "description" : "Auto generated using Swagger Inspector",
+          "requestBody" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/body_1"
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "{\n        \"id\": 5,\n        \"category\": \"electronics\",\n        \"name\": \"TV\",\n        \"display_name\": \"OLED TV\",\n        \"description\": \"High Res\"\n    }"
+                  }
+                }
+              }
+            }
+          },
+          "responses" : {
+            "201" : {
+              "description" : "Auto generated using Swagger Inspector",
+              "content" : {
+                "application/json; charset=utf-8" : {
+                  "schema" : {
+                    "type" : "string"
+                  },
+                  "examples" : { }
+                }
+              }
+            }
+          },
+          "servers" : [ {
+            "url" : "http://localhost:3000"
+          } ]
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "/products/2" : {
+        "get" : {
+          "description" : "Auto generated using Swagger Inspector",
+          "responses" : {
+            "200" : {
+              "description" : "Auto generated using Swagger Inspector",
+              "content" : {
+                "application/json; charset=utf-8" : {
+                  "schema" : {
+                    "type" : "string"
+                  },
+                  "examples" : { }
+                }
+              }
+            }
+          },
+          "servers" : [ {
+            "url" : "http://localhost:3000"
+          } ]
+        },
+        "put" : {
+          "description" : "Auto generated using Swagger Inspector",
+          "requestBody" : {
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/body_2"
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "{\n    \"id\": 2,\n    \"category\": \"electronics\",\n    \"name\": \"microwave\",\n    \"display_name\": \"Microwave\",\n    \"description\": \"too Hot\"\n}"
+                  }
+                }
+              }
+            }
+          },
+          "responses" : {
+            "200" : {
+              "description" : "Auto generated using Swagger Inspector",
+              "content" : {
+                "application/json; charset=utf-8" : {
+                  "schema" : {
+                    "type" : "string"
+                  },
+                  "examples" : { }
+                }
+              }
+            }
+          },
+          "servers" : [ {
+            "url" : "http://localhost:3000"
+          } ]
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      },
+      "/categories" : {
+        "get" : {
+          "description" : "Auto generated using Swagger Inspector",
+          "parameters" : [ {
+            "name" : "name",
+            "in" : "query",
+            "required" : false,
+            "style" : "form",
+            "explode" : true,
+            "schema" : {
+              "type" : "string"
+            },
+            "example" : "books"
+          } ],
+          "responses" : {
+            "200" : {
+              "description" : "Auto generated using Swagger Inspector",
+              "content" : {
+                "application/json; charset=utf-8" : {
+                  "schema" : {
+                    "type" : "string"
+                  },
+                  "examples" : { }
+                }
+              }
+            }
+          },
+          "servers" : [ {
+            "url" : "http://localhost:3000"
+          } ]
+        },
+        "servers" : [ {
+          "url" : "http://localhost:3000"
+        } ]
+      }
+    },
+    "components" : {
+      "schemas" : {
+        "body" : {
+          "type" : "object",
+          "properties" : {
+            "name" : {
+              "type" : "string"
+            },
+            "description" : {
+              "type" : "string"
+            },
+            "id" : {
+              "type" : "integer"
+            },
+            "display_name" : {
+              "type" : "string"
+            }
+          }
+        },
+        "body_1" : {
+          "type" : "object",
+          "properties" : {
+            "name" : {
+              "type" : "string"
+            },
+            "description" : {
+              "type" : "string"
+            },
+            "id" : {
+              "type" : "integer"
+            },
+            "category" : {
+              "type" : "string"
+            },
+            "display_name" : {
+              "type" : "string"
+            }
+          }
+        },
+        "body_2" : {
+          "type" : "object",
+          "properties" : {
+            "name" : {
+              "type" : "string"
+            },
+            "description" : {
+              "type" : "string"
+            },
+            "id" : {
+              "type" : "integer"
+            },
+            "category" : {
+              "type" : "string"
+            },
+            "display_name" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  }

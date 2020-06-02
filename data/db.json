@@ -1,0 +1,46 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "electronics",
+      "display_name": "Home appliances",
+      "description": "Comfey House"
+    },
+    {
+      "id": 2,
+      "name": "books",
+      "display_name": "Books",
+      "description": "Knowledge is Power"
+    }
+  ],
+  "products": [
+    {
+      "id": 2,
+      "category": "electronics",
+      "name": "microwave",
+      "display_name": "Microwave",
+      "description": "too Hot"
+    },
+    {
+      "id": 3,
+      "category": "books",
+      "name": "cracking the coding interview",
+      "display_name": "Cracking The Coding Interview",
+      "description": "Good Book"
+    },
+    {
+      "id": 4,
+      "category": "electronics",
+      "name": "washer",
+      "display_name": "Washer",
+      "description": " very Clean"
+    },
+    {
+      "id": 5,
+      "category": "electronics",
+      "name": "TV",
+      "display_name": "OLED TV",
+      "description": "High Res"
+    }
+  ]
+}
