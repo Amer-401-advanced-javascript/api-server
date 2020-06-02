@@ -18,24 +18,24 @@
 
 <!-- i.e. -->
 
-<!-- - `PORT` - Port Number -->
+- `PORT` - 3000
 <!-- - `MONGODB_URI` - URL to the running mongo instance/db -->
 
 #### How to initialize/run your application (where applicable)
 
 <!-- - e.g. `npm start` -->
-json-server --watch ./data/db.json
+by running `node index.js` command
 
 
 #### How to use your library (where applicable)
 
 #### Tests
 
-<!-- - How do you run tests? -->
+- How do you run tests? run the tests by using `npm test` command
 <!-- - Any tests of note? -->
 <!-- - Describe any tests that you did not complete, skipped, etc -->
 
 #### UML
 
 Link to an image of the UML for your application and response to events
-[WhiteBoarding](https://drive.google.com/file/d/1OkJE876xTQ9BCt3ZcoFT5_x78zAcLQJG/view?usp=sharing)
+[WhiteBoarding](https://drive.google.com/file/d/1OwHn1chvdd2BDSJpLJEnPnDnrFs-EoG4/view?usp=sharing)
