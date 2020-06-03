@@ -97,4 +97,36 @@ describe('Web server', ()=> {
         });
       });
   });
+
+  it('can put and update the DB', () => {
+    let obj = {
+      category: 'cat',
+      name: 'hello',
+      display_name: 'oh bot its working',
+      description: 'testing',
+    };
+    let updatedObj = {
+      category: 'updated',
+      name: 'updated',
+      display_name: 'oh bot its working',
+      description: 'testing',
+    };
+    return mockRequest
+      .post('/api/v1/products')
+      .send(obj)
+      .then(data => {
+        let id =  data.body._id;
+        return mockRequest
+          .put(`/api/v1/products/${id}`)
+          .send(updatedObj)
+          .then(data => {
+            let result = data.body;
+            Object.keys(updatedObj).forEach(key => {
+              expect(result[key]).toEqual(updatedObj[key]);
+            });
+        
+          });
+      
+      });
+  });
 });
