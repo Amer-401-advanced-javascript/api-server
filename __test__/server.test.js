@@ -1,10 +1,11 @@
 'use strict';
 
+const supergoose = require('@code-fellows/supergoose');
 const {server} = require('../lib/server');
-const supertest = require('supertest');
-const mockRequest = supertest(server);
+const mockRequest = supergoose(server);
 
-describe('Web Server', ()=> {
+describe('Web server', ()=> {
+
   it('Respond with 404 on a bad request', ()=> {
     return mockRequest
       .get('/badRequest')
@@ -13,72 +14,87 @@ describe('Web Server', ()=> {
       });
   });
 
-  it('should respond to /products route', ()=> {
+  it('test failure on product' ,()=> {
+    let obj = {not : 'not'};
     return mockRequest
-      .get('/products')
-      .then(response => {
-        expect(response.status).toBe(200);
-      });
-  });
-  
-  it('should respond to /categories route', ()=> {
-    return mockRequest
-      .get('/categories')
-      .then(response => {
-        expect(response.status).toBe(200);
+      .post('/api/v1/products')
+      .send(obj)
+      .then( data => {
+        expect(data.status).toBe(500);
       });
   });
 
-  it('should post data ON PRODUCTS ROUTE', ()=> {
+  it('test failure on categories', ()=> {
+    let obj = {not : 'not'};
     return mockRequest
-      .post('/products')
-      .send({product :'TV'})
-      .then(res => {
-        expect(res.status).toBe(200);
+      .post('/api/v1/categories')
+      .send(obj)
+      .then(data => {
+        expect(data.status).toBe(500);
       });
   });
 
-  it('should post data using POST on categories route', ()=> {
+  it('should return the whole product entity', ()=> {
+    let obj = {
+      category: 'cat',
+      name: 'hello',
+      display_name: 'oh bot its working',
+      description: 'testing',
+    };
     return mockRequest
-      .post('/categories')
-      .send({product :'TV'})
-      .then(res => {
-        expect(res.status).toBe(200);
+      .post('/api/v1/products')
+      .send(obj)
+      .then(data => {        
+        return mockRequest
+          .get('/api/v1/products')
+          .then(data => {
+            let result = data.body;
+            Object.keys(obj).forEach(key => {
+              expect(result[0][key]).toEqual(obj[key]);
+              expect(data.status).toBe(200);
+            });
+          });
       });
   });
 
-  it('should delete data using the DELETE on products route', ()=> {
+  it('should return the whole categories entity', ()=> {
+    let obj = {
+      name: 'hello',
+      display_name: 'oh bot its working',
+      description: 'testing',
+    };
     return mockRequest
-      .delete('/products/2')
-      .then(res => {
-        expect(res.status).toBe(200);
+      .post('/api/v1/categories')
+      .send(obj)
+      .then(data => {
+        return mockRequest
+          .get('/api/v1/categories')
+          .then(data => {                 
+            let result = data.body[0];
+            Object.keys(obj).forEach(key => {
+              expect(result[key]).toEqual(obj[key]);
+              expect(data.status).toBe(200);
+            });
+          });
       });
   });
 
-  it('should delete data using the DELETE on categories route', ()=> {
+
+  it('should post and create new data on products', ()=> {
+    let obj = {
+      category: 'cat',
+      name: 'hello',
+      display_name: 'oh bot its working',
+      description: 'testing',
+    };
     return mockRequest
-      .delete('/categories/1')
-      .then(res => {
-        expect(res.status).toBe(200);
+      .post('/api/v1/products')
+      .send(obj)
+      .then( data => {        
+        Object.keys(obj).forEach(key => {
+          expect(data.body[key]).toEqual(obj[key]);
+          expect(data.status).toBe(200);
+        });
       });
   });
-
-  it('should update data using PUT on products route', ()=> {
-    return mockRequest
-      .put('/products/1')
-      .send({name : 'Television'})
-      .then(res => {
-        expect(res.status).toBe(200);
-      });
-  });
-
-  it('should update data using PUT on categories route', ()=> {
-    return mockRequest
-      .put('/categories/1')
-      .send({name : 'Games'})
-      .then(res => {
-        expect(res.status).toBe(200);
-      });
-  });
-
 });

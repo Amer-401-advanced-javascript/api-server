@@ -1,5 +1,5 @@
 
-# LAB - Class 06
+# LAB - Class 08
 
 ## Project: api-server
 
@@ -38,4 +38,4 @@ by running `node index.js` command
 #### UML
 
 Link to an image of the UML for your application and response to events
-[WhiteBoarding](https://drive.google.com/file/d/1OwHn1chvdd2BDSJpLJEnPnDnrFs-EoG4/view?usp=sharing)
+[WhiteBoarding](https://drive.google.com/file/d/1PB9LbmW3NRP9VlKhp5t-oNkzcdnyJsEz/view?usp=sharing)
