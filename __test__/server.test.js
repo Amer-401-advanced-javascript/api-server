@@ -93,7 +93,7 @@ describe('Web server', ()=> {
       .then( data => {        
         Object.keys(obj).forEach(key => {
           expect(data.body[key]).toEqual(obj[key]);
-          expect(data.status).toBe(200);
+          expect(data.status).toBe(201);
         });
       });
   });
